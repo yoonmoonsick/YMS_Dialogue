@@ -30,7 +30,7 @@
         <Setter Property="noesis:Text.Stroke" Value="{StaticResource Dialogue.Stroke}"/>
         <Setter Property="noesis:Text.StrokeThickness" Value="8" />
         <Setter Property="FontSize" Value="36"/>
-        <Setter Property="LineHeight" Value="40" />
+        <Setter Property="LineHeight" Value="44" />
 
         <Style.Triggers>
             <DataTrigger Binding="{Binding SuggestedByPlayers.Count, Converter={StaticResource GreaterThanConverter}, ConverterParameter=0}" Value="True">
@@ -38,7 +38,7 @@
             </DataTrigger>
             <DataTrigger Binding="{Binding DataContext.Data.UIInputMethod, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="Controller">
                  <!-- Put all the Controller setters here -->
-                <Setter Property="FontSize" Value="40"/>
+                <Setter Property="FontSize" Value="36"/>
                 <Setter Property="noesis:Text.Stroke" Value="#AC000000" />
             </DataTrigger>
         </Style.Triggers>
@@ -56,7 +56,7 @@
     <!-- suggestion prefix style -->
     <Style x:Key="Dialogue.SuggestionTextStyle" TargetType="TextBlock" BasedOn="{StaticResource Dialogue.AnswerTextStyle}">
         <Setter Property="FontSize" Value="36"/>
-        <Setter Property="LineHeight" Value="36" />
+        <Setter Property="LineHeight" Value="44" />
 
         <Setter Property="Visibility" Value="Collapsed"/>
         <Style.Triggers>
@@ -93,7 +93,7 @@
                     </ControlTemplate.Resources>
 
                     <!-- layout -->
-                    <Grid x:Name="AnswerRoot" Width="2560">
+                    <Grid x:Name="AnswerRoot" Width="2120">
                         <Grid.RowDefinitions>
                             <RowDefinition x:Name="AnswerRowDefinition"/>
                             <RowDefinition x:Name="SuggestionRowDefinition"/>
@@ -115,7 +115,7 @@
                                          HorizontalContentAlignment="Left" HorizontalAlignment="Left"
                                          Margin="0,0,-52,0">
 
-                                <Grid x:Name="AnswerHolder" MaxWidth="2560">
+                                <Grid x:Name="AnswerHolder" MaxWidth="2120">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" />
@@ -311,8 +311,8 @@
                                 <Condition Binding="{Binding DataContext.Data.AspectRatio, Converter={StaticResource GreaterThanConverter}, ConverterParameter=0.5625, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="False"/>
                             </MultiDataTrigger.Conditions>
                             <!-- Put all the fullscreen Controller setters here -->
-                            <Setter TargetName="AnswerRoot" Property="Width" Value="2560"/>
-                            <Setter TargetName="AnswerHolder" Property="Width" Value="2560"/>
+                            <Setter TargetName="AnswerRoot" Property="Width" Value="2120"/>
+                            <Setter TargetName="AnswerHolder" Property="Width" Value="2120"/>
                         </MultiDataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
