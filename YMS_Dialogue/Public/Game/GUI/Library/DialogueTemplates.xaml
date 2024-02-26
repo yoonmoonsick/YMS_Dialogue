@@ -13,13 +13,13 @@
 
     <!-- body text style -->
     <Style x:Key="Dialogue.BodyTextStyle" TargetType="TextBlock" BasedOn="{StaticResource Dialogue.BodyTextStyleBase}">
-        <Setter Property="FontSize" Value="{Binding DataContext.CurrentPlayer.UIOptions.DialogueFontSizeModifier, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Converter={StaticResource AddConverter}, ConverterParameter={StaticResource TitleFontSize}}" />
+        <Setter Property="FontSize" Value="36"/>
         <Setter Property="noesis:Text.Stroke" Value="{StaticResource Dialogue.Stroke}" />
         <Setter Property="noesis:Text.StrokeThickness" Value="8" />
         <Style.Triggers>
             <DataTrigger Binding="{Binding DataContext.Data.UIInputMethod, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="Controller">
                 <!-- Put all the Controller setters here -->
-                <Setter Property="FontSize" Value="{Binding DataContext.CurrentPlayer.UIOptions.DialogueFontSizeModifier, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Converter={StaticResource AddConverter}, ConverterParameter={StaticResource LargeFontSize}}" />
+                <Setter Property="FontSize" Value="36"/>
                 <Setter Property="noesis:Text.Stroke" Value="#AC000000" />
             </DataTrigger>
         </Style.Triggers>
@@ -29,7 +29,7 @@
     <Style x:Key="Dialogue.AnswerTextStyle" TargetType="TextBlock" BasedOn="{StaticResource Dialogue.AnswerTextStyleBase}">
         <Setter Property="noesis:Text.Stroke" Value="{StaticResource Dialogue.Stroke}"/>
         <Setter Property="noesis:Text.StrokeThickness" Value="8" />
-        <Setter Property="FontSize" Value="{Binding DataContext.CurrentPlayer.UIOptions.DialogueFontSizeModifier, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Converter={StaticResource AddConverter}, ConverterParameter={StaticResource TitleFontSize}}" />
+        <Setter Property="FontSize" Value="36"/>
         <Setter Property="LineHeight" Value="{Binding DataContext.CurrentPlayer.UIOptions.DialogueFontSizeModifier, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Converter={StaticResource AddConverter}, ConverterParameter={StaticResource Dialogue.Answer.LineHeight}}" />
 
         <Style.Triggers>
@@ -38,7 +38,7 @@
             </DataTrigger>
             <DataTrigger Binding="{Binding DataContext.Data.UIInputMethod, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="Controller">
                  <!-- Put all the Controller setters here -->
-                <Setter Property="FontSize" Value="{Binding DataContext.CurrentPlayer.UIOptions.DialogueFontSizeModifier, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Converter={StaticResource AddConverter}, ConverterParameter={StaticResource LargeFontSize}}" />
+                <Setter Property="FontSize" Value="36"/>
                 <Setter Property="noesis:Text.Stroke" Value="#AC000000" />
             </DataTrigger>
         </Style.Triggers>
@@ -55,14 +55,14 @@
 
     <!-- suggestion prefix style -->
     <Style x:Key="Dialogue.SuggestionTextStyle" TargetType="TextBlock" BasedOn="{StaticResource Dialogue.AnswerTextStyle}">
-        <Setter Property="FontSize" Value="{Binding DataContext.CurrentPlayer.UIOptions.DialogueFontSizeModifier, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Converter={StaticResource AddConverter}, ConverterParameter={StaticResource DefaultFontSize}}" />
+        <Setter Property="FontSize" Value="36"/>
         <Setter Property="LineHeight" Value="{Binding DataContext.CurrentPlayer.UIOptions.DialogueFontSizeModifier, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Converter={StaticResource AddConverter}, ConverterParameter={StaticResource Dialogue.SuggestedAnswer.LineHeight}}" />
 
         <Setter Property="Visibility" Value="Collapsed"/>
         <Style.Triggers>
             <DataTrigger Binding="{Binding DataContext.Data.UIInputMethod, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="Controller">
                 <!-- Put all the Controller setters here -->
-                <Setter Property="FontSize" Value="{Binding DataContext.CurrentPlayer.UIOptions.DialogueFontSizeModifier, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Converter={StaticResource AddConverter}, ConverterParameter={StaticResource SmallishFontSize}}" />
+                <Setter Property="FontSize" Value="36"/>
                 <Setter Property="Visibility" Value="Visible"/>
             </DataTrigger>
         </Style.Triggers>
@@ -166,7 +166,7 @@
                                                                     </Setter>
                                                                     <Setter Property="ToolTipService.PlacementTarget" Value="{Binding ElementName=AnswerHolder}"/>
                                                                     <Setter Property="Foreground" Value="{StaticResource Dialogue.Answer.Tag}" />
-                                                                    <Setter Property="FontSize" Value="{Binding DataContext.CurrentPlayer.UIOptions.DialogueFontSizeModifier, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Converter={StaticResource AddConverter}, ConverterParameter={StaticResource LargeFontSize}}"/>
+                                                                    <Setter Property="FontSize" Value="36"/>
                                                                     <Setter Property="noesis:Text.Stroke" Value="{StaticResource Dialogue.Stroke}"/>
                                                                     <Setter Property="noesis:Text.StrokeThickness" Value="8"/>
                                                                 </DataTrigger>
@@ -192,7 +192,7 @@
                                                                 </Trigger>
                                                                 <DataTrigger Binding="{Binding DataContext.Data.UIInputMethod, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}}" Value="Controller">
                                                                     <!-- Put all the Controller setters here -->
-                                                                    <Setter Property="FontSize" Value="{Binding DataContext.CurrentPlayer.UIOptions.DialogueFontSizeModifier, RelativeSource={RelativeSource AncestorType={x:Type ls:UIWidget}}, Converter={StaticResource AddConverter}, ConverterParameter={StaticResource DefaultFontSize}}" />
+                                                                    <Setter Property="FontSize" Value="36" />
                                                                     <Setter Property="noesis:Text.Stroke" Value="#AC000000" />
                                                                 </DataTrigger>
                                                             </Style.Triggers>
